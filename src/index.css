@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --ferre-bg: #09090b;
+    --ferre-surface: #18181b;
+    --ferre-border: #27272a;
+    --ferre-text: #fafafa;
+    --ferre-muted: #a1a1aa;
+    --ferre-yellow: #facc15;
+    --ferre-blue: #2563eb;
+}
+
+html, body {
+    margin: 0;
+    background-color: var(--ferre-bg);
+    color: var(--ferre-text);
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+    font-family: 'Barlow Condensed', 'Manrope', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+::selection {
+    background: var(--ferre-yellow);
+    color: #09090b;
+}
+
+/* Subtle grain texture overlay */
+.grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+}
+
+/* Diagonal hazard stripes */
+.hazard-stripes {
+    background-image: repeating-linear-gradient(
+        45deg,
+        #facc15 0,
+        #facc15 14px,
+        #09090b 14px,
+        #09090b 28px
+    );
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+    animation: fadeUp 0.7s ease forwards;
+    opacity: 0;
+}
+.fade-up.delay-1 { animation-delay: 0.08s; }
+.fade-up.delay-2 { animation-delay: 0.16s; }
+.fade-up.delay-3 { animation-delay: 0.24s; }
+.fade-up.delay-4 { animation-delay: 0.32s; }
+.fade-up.delay-5 { animation-delay: 0.40s; }
+.fade-up.delay-6 { animation-delay: 0.48s; }
+
+/* Map dark filter */
+.map-dark {
+    filter: invert(92%) hue-rotate(180deg) saturate(0.7) brightness(0.95);
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Hide horizontal overflow */
+body { overflow-x: hidden; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #09090b; }
+::-webkit-scrollbar-thumb { background: #27272a; }
+::-webkit-scrollbar-thumb:hover { background: #3f3f46; }

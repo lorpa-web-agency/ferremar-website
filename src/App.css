@@ -1,0 +1,2 @@
+/* App-specific styles handled mostly via Tailwind in components. */
+.App { min-height: 100vh; background: #09090b; }
