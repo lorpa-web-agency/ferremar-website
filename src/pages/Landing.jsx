@@ -21,6 +21,13 @@ import {
   X,
 } from "lucide-react";
 
+import heroImg from '../assets/images/hero.png';
+import gallery01 from '../assets/images/01.png';
+import gallery02 from '../assets/images/02.jpg';
+import gallery03 from '../assets/images/03.jpg';
+import gallery04 from '../assets/images/04.jpg';
+import gallery05 from '../assets/images/05.jpg';
+
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
@@ -32,19 +39,16 @@ const WHATSAPP_URL = `https://wa.me/584120929193?text=${encodeURIComponent(
 const ADDRESS = "CASA B4, Av Aldonza Manrique, Pampatar 6316, Nueva Esparta";
 const PLUS_CODE = "X5RJ+25 Pampatar, Nueva Esparta";
 const MAP_EMBED =
-  "https://www.google.com/maps?q=" +
-  encodeURIComponent("X5RJ+25 Pampatar, Nueva Esparta") +
-  "&output=embed";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15666.591277806765!2d-63.819596999999995!3d10.9899331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c318fb57d766a3f%3A0xd92031f3aa1a20d1!2sFERRETERIA%20FERREMAR%20PAMPATAR%20CA!5e0!3m2!1ses-419!2sve!4v1778249539243!5m2!1ses-419!2sve";
 const MAP_LINK =
-  "https://www.google.com/maps/search/?api=1&query=" +
-  encodeURIComponent("X5RJ+25 Pampatar, Nueva Esparta");
+  "https://maps.app.goo.gl/Zn41mu4X9iS49EME7";
 
 const GALLERY = [
-  "https://customer-assets.emergentagent.com/job_d5c14d24-9e32-41a9-bfc3-8114a0d2c591/artifacts/b3fos347_01.jpg",
-  "https://customer-assets.emergentagent.com/job_d5c14d24-9e32-41a9-bfc3-8114a0d2c591/artifacts/dgjf2207_02.jpg",
-  "https://customer-assets.emergentagent.com/job_d5c14d24-9e32-41a9-bfc3-8114a0d2c591/artifacts/t3z88cxe_03.jpg",
-  "https://customer-assets.emergentagent.com/job_d5c14d24-9e32-41a9-bfc3-8114a0d2c591/artifacts/3ehkt33g_04.jpg",
-  "https://customer-assets.emergentagent.com/job_d5c14d24-9e32-41a9-bfc3-8114a0d2c591/artifacts/82srujfz_06.jpg",
+  gallery01,
+  gallery02,
+  gallery03,
+  gallery04,
+  gallery05,
 ];
 
 const NAV_ITEMS = [
@@ -140,13 +144,12 @@ const Hero = () => (
     {/* Background layers */}
     <div className="absolute inset-0 z-0">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-30"
+        className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1770351978852-43d97c436b4f?crop=entropy&cs=srgb&fm=jpg&q=85')",
+          backgroundImage:`url(${heroImg})`,
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/70 via-zinc-950/85 to-zinc-950" />
+      
     </div>
 
     {/* Hazard stripe accent */}
@@ -243,7 +246,7 @@ const Hero = () => (
         ].map((s, i) => (
           <div
             key={i}
-            className="py-6 px-4 border-r last:border-r-0 border-zinc-800 [&:nth-child(2)]:border-r md:[&:nth-child(2)]:border-r"
+            className="py-6 px-4 border-r last:border-r-0 border-zinc-800 bg-zinc-900/60 [&:nth-child(2)]:border-r md:[&:nth-child(2)]:border-r"
           >
             <p className="text-[10px] uppercase tracking-[0.25em] text-zinc-500 font-medium">
               {s.k}
@@ -389,18 +392,18 @@ const Gallery = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-3 md:gap-4 h-[520px] sm:h-[640px]">
+      <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 auto-rows-fr gap-3 md:gap-4 h-[520px] sm:h-[640px]">
         <a
           href={GALLERY[0]}
           target="_blank"
           rel="noopener noreferrer"
-          className="col-span-2 row-span-2 group relative overflow-hidden border border-zinc-800"
+          className="col-span-2 row-span-2 min-h-0 group relative overflow-hidden border border-zinc-800"
           data-testid="gallery-image-1"
         >
           <img
             src={GALLERY[0]}
             alt="Interior FERREMAR 1"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-full min-h-0 object-cover transition-transform duration-700 group-hover:scale-105"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/0 to-zinc-950/0" />
