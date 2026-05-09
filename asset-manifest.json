@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/ferremar-website/static/css/main.a20e4223.css",
-    "main.js": "/ferremar-website/static/js/main.3a6033c9.js",
-    "static/media/hero.png": "/ferremar-website/static/media/hero.c330f3afc71267a58dce.png",
-    "static/media/01.png": "/ferremar-website/static/media/01.83951c0c7bbaab3540fe.png",
-    "static/media/03.jpg": "/ferremar-website/static/media/03.6de771f46d1e4df2a905.jpg",
-    "static/media/05.jpg": "/ferremar-website/static/media/05.82823842018d10cb928d.jpg",
-    "static/media/04.jpg": "/ferremar-website/static/media/04.5912c06aefb9b5c4181d.jpg",
-    "static/media/02.jpg": "/ferremar-website/static/media/02.64b4e92ecc01d8b74eb6.jpg",
-    "index.html": "/ferremar-website/index.html",
-    "main.a20e4223.css.map": "/ferremar-website/static/css/main.a20e4223.css.map",
-    "main.3a6033c9.js.map": "/ferremar-website/static/js/main.3a6033c9.js.map"
+    "main.css": "/static/css/main.a20e4223.css",
+    "main.js": "/static/js/main.485a39d4.js",
+    "static/media/hero.png": "/static/media/hero.c330f3afc71267a58dce.png",
+    "static/media/01.png": "/static/media/01.83951c0c7bbaab3540fe.png",
+    "static/media/03.jpg": "/static/media/03.6de771f46d1e4df2a905.jpg",
+    "static/media/05.jpg": "/static/media/05.82823842018d10cb928d.jpg",
+    "static/media/04.jpg": "/static/media/04.5912c06aefb9b5c4181d.jpg",
+    "static/media/02.jpg": "/static/media/02.64b4e92ecc01d8b74eb6.jpg",
+    "index.html": "/index.html",
+    "main.a20e4223.css.map": "/static/css/main.a20e4223.css.map",
+    "main.485a39d4.js.map": "/static/js/main.485a39d4.js.map"
   },
   "entrypoints": [
     "static/css/main.a20e4223.css",
-    "static/js/main.3a6033c9.js"
+    "static/js/main.485a39d4.js"
   ]
 }
